@@ -30,6 +30,12 @@ header nav ul li a {
     color: white;
     text-decoration: none;
 }
+.head_container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
 .container {
     width: 80%;
     margin: auto;
