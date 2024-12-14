@@ -72,6 +72,7 @@ header nav ul li a {
 
     .profile-image {
         position: static;           /* Removes absolute positioning */
+        margin-top: =10px;
         margin-bottom: 15px;        /* Adds spacing below the image */
     }
 
