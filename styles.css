@@ -13,8 +13,8 @@ header {
     text-align: center;
 }
 /* header {
-    background: url('./images/background.jpeg'} no-repeat center center; /* Replace with your image path */
-    background-size: cover; /* Ensures the image covers the full header area */
+    background: url('./images/background.jpeg'} no-repeat center center;  
+    background-size: cover; 
     color: white;
     padding: 20px 0;
     text-align: center;
