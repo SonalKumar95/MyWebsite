@@ -152,7 +152,7 @@ footer {
 /* Contact Styling */
 .contact-links {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between; /* Evenly space the items across the container */
     align-items: center;
     margin-top: 10px;
   }
@@ -161,8 +161,20 @@ footer {
     text-decoration: none;
     color: inherit;
   }
-  
+
   .contact-links a strong {
     display: inline-block;
-    margin: 0 10px; /* Adjust spacing between links */
+    margin: 0 10px; /* Optional, to add space around each link */
+  }
+
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .contact-links {
+      flex-wrap: wrap;
+      justify-content: center; /* Center the items if there's not enough space */
+    }
+
+    .contact-links a {
+      margin: 5px 10px; /* Adjust margins for smaller screens */
+    }
   }
