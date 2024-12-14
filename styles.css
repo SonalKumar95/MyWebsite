@@ -73,3 +73,51 @@ footer {
 .text-box p {
     color: #555;   /* Slightly lighter text for the paragraph */
 }
+/* General styling for navigation */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px; /* Space between buttons */
+}
+
+nav li {
+    position: relative; /* Needed for the text box effect */
+}
+
+.nav-button {
+    text-decoration: none;
+    color: #007bff; /* Link color */
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-button:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Text box effect */
+.nav-button::after {
+    content: attr(data-text); /* Fetches the custom text from data-text */
+    position: absolute;
+    bottom: -35px; /* Position below the button */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8); /* Black background */
+    color: #fff; /* White text */
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* Prevents interaction */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show the text box on hover */
+.nav-button:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px); /* Moves slightly upwards */
+}
