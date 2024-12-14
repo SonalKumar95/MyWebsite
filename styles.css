@@ -140,7 +140,7 @@ footer {
 
 .nav-box a {
     text-decoration: none;        /* Removes underline from links */
-    color: #007bff;               /* Blue color for links */
+    color: #003366;               /* Blue color for links,007bff; */
     font-size: 16px;
     font-weight: bold;
     transition: color 0.3s ease;  /* Smooth hover effect */
