@@ -39,28 +39,30 @@ header nav ul li a {
 } */
 /* Header Container */
 .head_container {
-    display: flex;                 /* Creates a flexbox layout */
-    align-items: center;           /* Aligns items vertically */
-    gap: 20px;                     /* Space between the image and text */
+    position: relative;            /* Makes the container a reference for positioning */
+    text-align: center;            /* Keeps the content centered */
     padding: 20px;
     max-width: 1200px;             /* Optional: Limit the header width */
     margin: 0 auto;                /* Center-align the header container */
 }
 
-/* Profile Image */
+/* Profile Image - Positioned on the left */
+.profile-image {
+    position: absolute;            /* Positions the image independently */
+    top: 50%;                      /* Vertically centers relative to the header */
+    left: 20px;                    /* Distance from the left edge */
+    transform: translateY(-50%);   /* Adjusts for image's height */
+}
+
 .profile-image img {
-    width: 150px;                  /* Fixed width */
-    height: 150px;                 /* Fixed height */
+    width: 120px;                  /* Fixed width */
+    height: 120px;                 /* Fixed height */
     border-radius: 50%;            /* Makes the image circular */
     border: 3px solid #ddd;        /* Adds a border */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     object-fit: cover;             /* Ensures the image fits perfectly */
 }
 
-/* Header Content */
-.header-content {
-    flex: 1;                       /* Fills remaining space next to the image */
-}
 .container {
     width: 80%;
     margin: auto;
