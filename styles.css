@@ -49,8 +49,8 @@ header nav ul li a {
 
 /* Profile Image */
 .profile-image img {
-    width: 20px;                  /* Fixed width */
-    height: 20px;                 /* Fixed height */
+    width: 50px;                  /* Fixed width */
+    height: 50px;                 /* Fixed height */
     border-radius: 50%;            /* Makes the image circular */
     border: 3px solid #ddd;        /* Adds a border */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
