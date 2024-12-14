@@ -49,7 +49,7 @@ header nav ul li a {
     position: relative;            /* Makes the container a reference for positioning */
     text-align: center;            /* Keeps the content centered */
     padding: 20px;
-    width: 80%;             /* Optional: Limit the header width */
+    max-width: 1200px;             /* Optional: Limit the header width */
     margin: 0 auto;                /* Center-align the header container */
 }
 
