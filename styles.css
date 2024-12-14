@@ -8,7 +8,7 @@ body {
 }
 header {
 /*     background: #004C99; */
-    background: url('images/background.jpeg') repeat;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url('images/background.jpeg') repeat;
     color: white;
     padding: 20px 0;
     text-align: center;
