@@ -61,9 +61,9 @@ footer {
     border-radius: 10px;      /* Rounded corners */
     padding: 20px;            /* Space inside the box */
     margin: 20px auto;        /* Centered with margin */
-    max-width: 600px;         /* Limits the width */
+    /*max-width: 600px;*/         /* Limits the width */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    text-align: left;         /* Aligns text to the left */
+    text-align: justify;         /* Aligns text to the left */
     font-family: 'Arial', sans-serif;
 }
 .text-box h3 {
