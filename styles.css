@@ -54,70 +54,33 @@ footer {
     color: white;
 }
 
-/* Text box container */
-.text-box {
-    background-color: #FFFFFF; /* Light gray background */
-    border: 2px solid #ddd;   /* Subtle border */
-    border-radius: 10px;      /* Rounded corners */
-    padding: 20px;            /* Space inside the box */
-    margin: 20px auto;        /* Centered with margin */
-    width: 80%;         /* Limits the width */
+/* Container for the navigation menu */
+.nav-box {
+    display: inline-block;         /* Makes the navigation a block surrounded by a border */
+    background-color: #f9f9f9;    /* Light background color */
+    border: 2px solid #ddd;       /* Light gray border for the box */
+    border-radius: 10px;          /* Rounded corners for the text box */
+    padding: 10px 20px;           /* Padding inside the box */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    text-align: justify;         /* Aligns text to the left */
-    font-family: 'Arial', sans-serif;
-}
-.text-box h3 {
-    margin-top: 0; /* Removes default margin for better spacing */
-    color: #333;   /* Darker text for the heading */
-}
-.text-box p {
-    color: #555;   /* Slightly lighter text for the paragraph */
-}
-/* General styling for navigation */
-nav ul {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    gap: 20px; /* Space between buttons */
+    list-style-type: none;        /* Removes bullet points from the list */
+    margin: 20px auto 0;          /* Centers the text box and adds margin */
+    text-align: center;           /* Centers the links inside the box */
 }
 
-nav li {
-    position: relative; /* Needed for the text box effect */
+/* Styling for navigation links */
+.nav-box li {
+    display: inline;              /* Keeps the links inline */
+    margin: 0 10px;               /* Adds spacing between links */
 }
 
-.nav-button {
-    text-decoration: none;
-    color: #007bff; /* Link color */
+.nav-box a {
+    text-decoration: none;        /* Removes underline from links */
+    color: #007bff;               /* Blue color for links */
+    font-size: 16px;
     font-weight: bold;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease;  /* Smooth hover effect */
 }
 
-.nav-button:hover {
-    color: #0056b3; /* Darker blue on hover */
-}
-
-/* Text box effect */
-.nav-button::after {
-    content: attr(data-text); /* Fetches the custom text from data-text */
-    position: absolute;
-    bottom: -35px; /* Position below the button */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8); /* Black background */
-    color: #fff; /* White text */
-    font-size: 14px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    white-space: nowrap;
-    opacity: 0; /* Initially hidden */
-    pointer-events: none; /* Prevents interaction */
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-/* Show the text box on hover */
-.nav-button:hover::after {
-    opacity: 1;
-    transform: translateX(-50%) translateY(-5px); /* Moves slightly upwards */
+.nav-box a:hover {
+    color: #0056b3;               /* Darker blue on hover */
 }
