@@ -31,11 +31,35 @@ header nav ul li a {
     color: white;
     text-decoration: none;
 }
-.head_container {
+/* .head_container {
     width: 80%;
     margin: auto;
     overflow: hidden;
     padding: 20px;
+} */
+/* Header Container */
+.head_container {
+    display: flex;                 /* Creates a flexbox layout */
+    align-items: center;           /* Aligns items vertically */
+    gap: 20px;                     /* Space between the image and text */
+    padding: 20px;
+    max-width: 1200px;             /* Optional: Limit the header width */
+    margin: 0 auto;                /* Center-align the header container */
+}
+
+/* Profile Image */
+.profile-image img {
+    width: 120px;                  /* Fixed width */
+    height: 120px;                 /* Fixed height */
+    border-radius: 50%;            /* Makes the image circular */
+    border: 3px solid #ddd;        /* Adds a border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    object-fit: cover;             /* Ensures the image fits perfectly */
+}
+
+/* Header Content */
+.header-content {
+    flex: 1;                       /* Fills remaining space next to the image */
 }
 .container {
     width: 80%;
