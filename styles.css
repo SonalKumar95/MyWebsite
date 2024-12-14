@@ -13,7 +13,7 @@ body {
     text-align: center;
 } */
 header {
-    background: 'images/background.png' no-repeat center center; /* Replace with your image path */
+    background: 'images/background.jpeg' no-repeat center center; /* Replace with your image path */
     background-size: cover; /* Ensures the image covers the full header area */
     color: white;
     padding: 20px 0;
