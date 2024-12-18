@@ -181,16 +181,35 @@ footer {
   }
 
 <!-- Responsive Styles for first section -->
+    /* Base Layout */
+    #about-research-news {
+        display: flex;
+        gap: 20px;
+        margin: auto;
+        width: 80%;
+    }
+
+    #about-research-news > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #right-column {
+        height: auto;
+    }
+
+    /* Responsive Styles for Mobile */
     @media (max-width: 768px) {
         #about-research-news {
             flex-direction: column;
+            width: 100%;
         }
+
         #about-research-news > div {
             width: 100%;
-            flex: none;
         }
-        #about-research-news .text-box {
-            margin-bottom: 20px;
+
+        #right-column {
+            margin-top: 20px;
         }
     }
- 
