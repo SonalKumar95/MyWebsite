@@ -179,3 +179,18 @@ footer {
       margin: 5px 10px; /* Adjust margins for smaller screens */
     }
   }
+
+<!-- Responsive Styles for first section -->
+    @media (max-width: 768px) {
+        #about-research-news {
+            flex-direction: column;
+        }
+        #about-research-news > div {
+            width: 100%;
+            flex: none;
+        }
+        #about-research-news .text-box {
+            margin-bottom: 20px;
+        }
+    }
+ 
