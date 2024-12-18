@@ -123,8 +123,7 @@ footer {
     border: 2px solid #ddd;   /* Subtle border */
     border-radius: 10px;      /* Rounded corners */
     padding: 20px;            /* Space inside the box */
-    margin: 20px auto;        /* Centered with margin */
-    width: 80%;         /* Limits the width */
+    margin: 20px auto;        /* Centered with margin 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
     text-align: left;         /* Aligns text to the left */
     font-family: 'Arial', sans-serif;
