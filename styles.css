@@ -118,7 +118,24 @@ footer {
 .text-box p {
     color: #555;   /* Slightly lighter text for the paragraph */
 }
-
+.text-box_1 {
+    background-color: #ffffff; /* Light gray background */
+    border: 2px solid #ddd;   /* Subtle border */
+    border-radius: 10px;      /* Rounded corners */
+    padding: 20px;            /* Space inside the box */
+    margin: 20px auto;        /* Centered with margin */
+    width: 80%;         /* Limits the width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    text-align: left;         /* Aligns text to the left */
+    font-family: 'Arial', sans-serif;
+}
+.text-box_1 h3 {
+    margin-top: 0; /* Removes default margin for better spacing */
+    color: #333;   /* Darker text for the heading */
+}
+.text-box_1 p {
+    color: #555;   /* Slightly lighter text for the paragraph */
+}
 /* Container for the navigation menu */
 .nav-box {
     display: inline-block;         /* Makes the navigation a block surrounded by a border */
