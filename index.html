@@ -46,9 +46,9 @@
                 Semantic Segmentation, Object Discovery, Medical Image Synthesis, Report Generation, etc. I have also explored the applications of blockchain technology in the IoT domain during my m.tech.</p>
         </div>
     </section> -->
-    <section id="about-research-news" style="display: flex; gap: 20px; width: 80%; margin: auto; align-items: stretch;">
+    <section id="about-research-news" style="display: flex; gap: 20px; width: 80%; margin: auto; flex-wrap: wrap;">
     <!-- Left Column -->
-    <div style="flex: 2; display: flex; flex-direction: column; justify-content: space-between;">
+    <div style="flex: 2; display: flex; flex-direction: column;">
         <section id="about">
             <div class="text-box">
                 <h2><span style="color: #003366;">ABOUT</span></h2>
@@ -75,11 +75,11 @@
     </div>
 
     <!-- Right Column -->
-    <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+    <div id="right-column" style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
         <section id="latest-news" style="flex-grow: 1;">
-            <div class="text-box" style="height: 100%;">
+            <div class="text-box" style="height: auto;">
                 <h2><span style="color: #003366;">LATEST NEWS</span></h2>
-                <div style="height: calc(100% - 40px); overflow-y: auto;">
+                <div style="overflow-y: auto; max-height: calc(100vh - 300px);">
                     <ul style="list-style-type: none; padding: 0;">
                         <li><strong>December 2024:</strong> Received the IndoML 2024 Travel Grant Award.</li>
                         <li><strong>November 2024:</strong> Poster presentation for IPCL and DatUS at INDOML 2024.</li>
@@ -92,7 +92,7 @@
         </section>
 
         <section id="youtube-video" style="margin-top: 20px;">
-            <div class="text-box">
+            <div class="text-box" style="flex-shrink: 0;">
                 <h2><span style="color: #003366;">WATCH VIDEO</span></h2>
                 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
                     <iframe 
@@ -106,6 +106,29 @@
         </section>
     </div>
 </section>
+
+<!-- Script to Match Heights -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const leftColumn = document.querySelector("#about-research-news > div:first-child");
+        const rightColumn = document.querySelector("#about-research-news > div:last-child");
+
+        // Set the right column's height to match the left column only for desktop
+        if (window.innerWidth > 768 && leftColumn && rightColumn) {
+            rightColumn.style.height = `${leftColumn.offsetHeight}px`;
+        }
+
+        // Reset heights for mobile view
+        window.addEventListener("resize", function () {
+            if (window.innerWidth <= 768) {
+                rightColumn.style.height = "auto";
+            } else if (leftColumn) {
+                rightColumn.style.height = `${leftColumn.offsetHeight}px`;
+            }
+        });
+    });
+</script>
+
 
     <section id="publications">
         <div class="text-box">
