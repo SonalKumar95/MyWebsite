@@ -124,9 +124,9 @@
         const rightColumn = document.querySelector("#about-research-news > div:last-child");
 
         // Set the right column's height to match the left column only for desktop
-        if (window.innerWidth > 768 && leftColumn && rightColumn) {
+       <!-- if (window.innerWidth > 768 && leftColumn && rightColumn) {
             rightColumn.style.height = `${leftColumn.offsetHeight}px`;
-        }
+        } -->
 
         // Reset heights for mobile view
         window.addEventListener("resize", function () {
