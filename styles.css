@@ -233,25 +233,29 @@ footer {
 .slider {
     width: 100%;
     overflow: hidden;
-    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .slides {
     display: flex;
     animation: slideAnimation 15s infinite;
-    width: 100%;
 }
 
 .slides img {
-    width: 100vw; /* full viewport width */
-    height: auto;
-    object-fit: cover;
-    flex-shrink: 0;
+    width: 100%;              /* Fill available width */
+    max-width: 100%;          /* Don't overflow container */
+    height: auto;             /* Maintain aspect ratio */
+    object-fit: cover;        /* Crop if needed */
+    flex-shrink: 0;           /* Don't shrink image */
+    border-radius: 8px;
+    padding: 5px;
 }
 
+/* Smooth autoplay slide */
 @keyframes slideAnimation {
-    0% { transform: translateX(0); }
-    33% { transform: translateX(-100vw); }
-    66% { transform: translateX(-200vw); }
-    100% { transform: translateX(0); }
+    0% { transform: translateX(0%); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0%); }
 }
