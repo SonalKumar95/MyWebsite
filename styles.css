@@ -1,88 +1,97 @@
+/* GLOBAL STYLES */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #F8EBFF; /*F2F2F2 */
+    background: #F8EBFF;
     color: #333;
 }
+
+/* HEADER */
 header {
-/*     background: #004C99; */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url('images/background.jpeg') repeat;
     color: white;
     padding: 20px 0;
     text-align: center;
 }
+
 header h1 {
     margin: 0;
     font-size: 2.5em;
 }
+
 header p {
     margin: 5px 0 15px;
 }
+
 header nav ul {
     list-style: none;
     padding: 0;
 }
+
 header nav ul li {
     display: inline;
     margin: 0 10px;
 }
+
 header nav ul li a {
     color: white;
     text-decoration: none;
 }
-/* .head_container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    padding: 20px;
-} */
-/* Header Container */
+
+/* HEADER CONTAINER */
 .head_container {
-    position: relative;            /* Makes the container a reference for positioning */
-    text-align: center;            /* Keeps the content centered */
+    position: relative;
+    text-align: center;
     padding: 20px;
-    max-width: 1200px;             /* Optional: Limit the header width */
-    margin: 0 auto;                /* Center-align the header container */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Profile Image - Positioned on the left */
 .profile-image {
-    position: absolute;            /* Positions the image independently */
-    top: 50%;                      /* Vertically centers relative to the header */
-    left: 20px;                    /* Distance from the left edge */
-    transform: translateY(-50%);   /* Adjusts for image's height */
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
 }
 
 .profile-image img {
-    width: 175px;                  /* Fixed width */
-    height: 175px;                 /* Fixed height */
-    border-radius: 50%;            /* Makes the image circular */
-    border: 3px solid #ddd;        /* Adds a border */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    object-fit: cover;             /* Ensures the image fits perfectly */
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
 }
-/* Adjustments for Mobile View */
+
+/* MOBILE HEADER ADJUSTMENTS */
 @media (max-width: 768px) {
     .head_container {
         display: flex;
-        flex-direction: column;     /* Stack content vertically */
-        align-items: center;        /* Center all items */
+        flex-direction: column;
+        align-items: center;
     }
 
     .profile-image {
-        position: static;           /* Removes absolute positioning */
+        position: static;
         margin-top: 25px;
-        margin-bottom: 1px;        /* Adds spacing below the image */
+        margin-bottom: 1px;
     }
 
     .profile-image img {
-        width: 100px;               /* Slightly smaller image for mobile */
+        width: 100px;
         height: 100px;
     }
 }
 
+/* GENERAL CONTAINER */
 .container {
     width: 80%;
     margin: auto;
@@ -90,148 +99,145 @@ header nav ul li a {
     padding: 20px;
     text-align: justify;
 }
+
 section {
     margin: 20px 0;
 }
+
 footer {
     text-align: center;
     padding: 10px 0;
     background: #333;
     color: white;
 }
-/* Text box container */
-.text-box {
-    background-color: #ffffff; /* Light gray background */
-    border: 2px solid #ddd;   /* Subtle border */
-    border-radius: 10px;      /* Rounded corners */
-    padding: 20px;            /* Space inside the box */
-    margin: 20px auto;        /* Centered with margin */
-    width: 80%;         /* Limits the width */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    text-align: left;         /* Aligns text to the left */
-    font-family: 'Arial', sans-serif;
-}
-.text-box h3 {
-    margin-top: 0; /* Removes default margin for better spacing */
-    color: #333;   /* Darker text for the heading */
-}
-.text-box p {
-    color: #555;   /* Slightly lighter text for the paragraph */
-}
+
+/* TEXT BOXES */
+.text-box,
 .text-box_1 {
-    background-color: #ffffff; /* Light gray background */
-    border: 2px solid #ddd;   /* Subtle border */
-    border-radius: 10px;      /* Rounded corners */
-    padding: 20px;            /* Space inside the box */
-    margin: 20px auto;        /* Centered with margin 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    text-align: left;         /* Aligns text to the left */
+    background-color: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
     font-family: 'Arial', sans-serif;
-}
-.text-box_1 h3 {
-    margin-top: 0; /* Removes default margin for better spacing */
-    color: #333;   /* Darker text for the heading */
-}
-.text-box_1 p {
-    color: #555;   /* Slightly lighter text for the paragraph */
-}
-/* Container for the navigation menu */
-.nav-box {
-    display: inline-block;         /* Makes the navigation a block surrounded by a border */
-    background-color: #f9f9f9;    /* Light background color */
-    border: 2px solid #ddd;       /* Light gray border for the box */
-    border-radius: 10px;          /* Rounded corners for the text box */
-    padding: 10px 20px;           /* Padding inside the box */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    list-style-type: none;        /* Removes bullet points from the list */
-    margin: 20px auto 0;          /* Centers the text box and adds margin */
-    text-align: center;           /* Centers the links inside the box */
 }
 
-/* Styling for navigation links */
+.text-box h3,
+.text-box_1 h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.text-box p,
+.text-box_1 p {
+    color: #555;
+}
+
+/* NAVIGATION BOX */
+.nav-box {
+    display: inline-block;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+    margin: 20px auto 0;
+    text-align: center;
+}
+
 .nav-box li {
-    display: inline;              /* Keeps the links inline */
-    margin: 0 10px;               /* Adds spacing between links */
+    display: inline;
+    margin: 0 10px;
 }
 
 .nav-box a {
-    text-decoration: none;        /* Removes underline from links */
-    color: #003366;               /* Blue color for links,007bff; */
+    text-decoration: none;
+    color: #003366;
     font-size: 16px;
     font-weight: bold;
-    transition: color 0.3s ease;  /* Smooth hover effect */
+    transition: color 0.3s ease;
 }
 
 .nav-box a:hover {
-    color: #0056b3;               /* Darker blue on hover */
+    color: #0056b3;
 }
 
-/* Contact Styling */
+/* CONTACT LINKS */
 .contact-links {
     display: flex;
-    justify-content: space-between; /* Evenly space the items across the container */
+    justify-content: space-between;
     align-items: center;
     margin-top: 10px;
-  }
+}
 
-  .contact-links a {
+.contact-links a {
     text-decoration: none;
     color: inherit;
-  }
+}
 
-  .contact-links a strong {
+.contact-links a strong {
     display: inline-block;
-    margin: 0 10px; /* Optional, to add space around each link */
-  }
+    margin: 0 10px;
+}
 
-  /* Responsive design for smaller screens */
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .contact-links {
-      flex-wrap: wrap;
-      justify-content: center; /* Center the items if there's not enough space */
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .contact-links a {
-      margin: 5px 10px; /* Adjust margins for smaller screens */
+        margin: 5px 10px;
     }
-  }
+}
 
-<!-- Responsive Styles for first section -->
-    /* Base Layout */
+/* ABOUT-RESEARCH-NEWS SECTION */
+#about-research-news {
+    display: flex;
+    gap: 20px;
+    margin: auto;
+    width: 80%;
+    align-items: stretch;
+}
+
+#about-research-news > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#left-column {
+    flex: 2;
+}
+
+#right-column {
+    flex: 1;
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
     #about-research-news {
-        display: flex;
-        gap: 20px;
-        margin: auto;
-        width: 80%;
+        flex-direction: column;
+        width: 100%;
     }
 
     #about-research-news > div {
-        display: flex;
-        flex-direction: column;
+        width: 100%;
     }
 
     #right-column {
-        height: auto;
+        margin-top: 20px;
     }
+}
 
-    /* Responsive Styles for Mobile */
-    @media (max-width: 768px) {
-        #about-research-news {
-            flex-direction: column;
-            width: 100%;
-        }
-
-        #about-research-news > div {
-            width: 100%;
-        }
-
-        #right-column {
-            margin-top: 20px;
-        }
-    }
-
-<!-- .slider {
+/* SLIDER */
+.slider {
     width: 100%;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -243,40 +249,18 @@ footer {
 }
 
 .slides img {
-    width: 100%;              /* Fill available width */
-    max-width: 100%;          /* Don't overflow container */
-    height: auto;             /* Maintain aspect ratio */
-    object-fit: cover;        /* Crop if needed */
-    flex-shrink: 0;           /* Don't shrink image */
-    border-radius: 8px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
     padding: 5px;
+    flex-shrink: 0;
+    aspect-ratio: 1 / 1;
 }
 
-/* Smooth autoplay slide */
+/* SLIDER ANIMATION */
 @keyframes slideAnimation {
     0% { transform: translateX(0%); }
     33% { transform: translateX(-100%); }
     66% { transform: translateX(-200%); }
     100% { transform: translateX(0%); }
-} -->
-.slider {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-.slides {
-    display: flex;
-    animation: slideAnimation 15s infinite;
-}
-
-.slides img {
-    width: 100%;
-    aspect-ratio: 1 / 1;       /* Maintain square aspect ratio */
-    object-fit: cover;         /* Crop to fill square */
-    border-radius: 10px;
-    padding: 5px;
-    flex-shrink: 0;
-}
-
