@@ -230,7 +230,7 @@ footer {
         }
     }
 
-.slider {
+<!-- .slider {
     width: 100%;
     overflow: hidden;
     border-radius: 12px;
@@ -258,4 +258,25 @@ footer {
     33% { transform: translateX(-100%); }
     66% { transform: translateX(-200%); }
     100% { transform: translateX(0%); }
+} -->
+.slider {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+.slides {
+    display: flex;
+    animation: slideAnimation 15s infinite;
+}
+
+.slides img {
+    width: 100%;
+    aspect-ratio: 1 / 1;       /* Maintain square aspect ratio */
+    object-fit: cover;         /* Crop to fill square */
+    border-radius: 10px;
+    padding: 5px;
+    flex-shrink: 0;
+}
+
