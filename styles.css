@@ -232,26 +232,30 @@ footer {
 
 .slider {
     width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: 5px 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .slides {
     display: flex;
-    gap: 10px;
+    animation: slideAnimation 15s infinite;
 }
 
 .slides img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+    width: 100%;              /* Fill available width */
+    max-width: 100%;          /* Don't overflow container */
+    height: auto;             /* Maintain aspect ratio */
+    object-fit: cover;        /* Crop if needed */
+    flex-shrink: 0;           /* Don't shrink image */
     border-radius: 8px;
-    flex-shrink: 0;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease-in-out;
+    padding: 5px;
 }
 
-.slides img:hover {
-    transform: scale(1.05);
+/* Smooth autoplay slide */
+@keyframes slideAnimation {
+    0% { transform: translateX(0%); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0%); }
 }
