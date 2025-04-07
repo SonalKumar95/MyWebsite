@@ -238,20 +238,20 @@ footer {
 
 .slides {
     display: flex;
-    width: 300%; /* Adjust based on number of images */
     animation: slideAnimation 15s infinite;
+    width: 100%;
 }
 
 .slides img {
-    width: 100%;
+    width: 100vw; /* full viewport width */
     height: auto;
     object-fit: cover;
     flex-shrink: 0;
 }
 
 @keyframes slideAnimation {
-    0% { transform: translateX(0%); }
-    33% { transform: translateX(-100%); }
-    66% { transform: translateX(-200%); }
-    100% { transform: translateX(0%); }
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100vw); }
+    66% { transform: translateX(-200vw); }
+    100% { transform: translateX(0); }
 }
